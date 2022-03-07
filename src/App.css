@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
+/*
+=============== 
+FONTS
+===============
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;600;700;800&family=Montserrat:wght@100;300;400;900&family=Open+Sans:wght@300&family=Poppins:wght@200&display=swap');
+
+/*
+=============== 
+VARIABLES
+===============
+*/
+:root {
+  /* colors*/
+  --main-bg-color: #fafafa;
+  --sidebar-bg-color: #ffffff;
+  --font-grey-color: #b4b5c1;
+  --icon-grey-color: #b4b5c1;
+  --brand-pink-color: #e2698d;
+  --grey-circles-color: #626375;
+  --lightGreen-circlesBg-color: #c2eff0;
+  --darkGreen-Bg-color: #265859;
+  --thinLines-amount-color: #f2f1f3;
+
+  /*fonts*/
+  --ff-primary: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: var(--ff-primary);
+  font-size: 0.875rem;
+  color: var(--font-grey-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-grey-color) !important;
+}
+
+.hervest-body {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  background-color: var(--main-bg-color);
+}
+
+.hervest-sidebar-container {
+  flex: 1 1 15%;
+}
+
+.hervest-sidebar,
+.hervest-main {
+  padding: 1.5rem;
+}
+.hervest-sidebar {
+  background-color: white;
+}
+
+.hervest-main-container {
+  flex: 1 1 85%;
+}
+
+.menu-layout {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  border-radius: 0.75rem;
+  padding: 10px;
+  font-size: 14px;
+  margin: 0.7rem 0;
+}
+
+.menu-layout:hover {
+  background-color: #fdf6f8;
+}
+.menu-text {
+  margin: 3rem 0 1rem 0;
+}
+
+/* MAIN */
+
+.user {
+  border-radius: 0.75rem;
+}
+
+.greeting {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.totals {
+  background-color: var(--brand-pink-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
+  padding: 4.5rem 6rem;
+  border-radius: 12px;
+  margin: 2rem 0 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.totals span {
+  font-size: 14px;
+  font-weight: 100;
 }
 
-.App-link {
-  color: #61dafb;
+.totals h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.round {
+  position: absolute;
+  height: 400px;
+  opacity: 0.3;
+  top: 130px;
+  left: -50px;
+}
+
+.roundOne {
+  height: 400px;
+  opacity: 0.3;
+  position: absolute;
+  right: 250px;
+  bottom: 80px;
+}
+
+.watch {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.progress {
+  background: #f2f1f3;
+  border-radius: 2px;
+  background: #265859;
+  border-radius: 2px;
+  height: 4px;
+  width: 100%;
+}
+
+.image-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.625rem;
+  color: black;
+  margin-bottom: 1.2rem;
+}
+
+.card {
+  color: black;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+  background: #ffffff;
+  border-radius: 12px;
+  -webkit-filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+  padding: 2rem;
+}
+
+.rainyDiv {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 3fr);
+}
+
+.cardOne {
+  color: white;
+  background-color: var(--brand-pink-color);
+  padding: 1.5rem 2rem 7.5rem 2rem;
+}
+
+.cardTwo {
+  color: white;
+  background-color: var(--darkGreen-Bg-color);
+  padding: 1.5rem 2rem 7.5rem 2rem;
+}
+
+.cardThree {
+  color: white;
+  background-color: var(--font-grey-color);
+  padding: 1.5rem 2rem 2.5rem 2rem;
+}
+
+.cardImage {
+  position: absolute;
+  top: 9px;
+  right: 25px;
+}
+
+.cardImageTwo {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+}
+
+.girlCodeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-top: 50px;
+}
+
+.girlCodeBG {
+  background-color: var(--brand-pink-color);
+  padding: 0.3rem;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  text-transform: uppercase;
 }

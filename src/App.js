@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from './components/Layout/Main'
+import Sidebar from './components/Layout/Sidebar'
+import './App.css'
+import items from './items'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <section className='hervest-body'>
+      <Sidebar items={items} />
+      <Main className='hervest-main' />
+    </section>
+  )
 }
 
-export default App;
+export default App
